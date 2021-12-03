@@ -5,11 +5,25 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.css']
 })
-export class NewComponent implements OnInit {
+export class NewComponent {
 
-  constructor() { }
+    name= "Samuel";
+    age =33
+    
 
-  ngOnInit(): void {
-  }
+    getAge(){
+      return this.age
+    }
 
+    add(){
+      console.log(`Adcionado ${this.name}`);
+      
+      const number = Math.round(Math.random() * 100);
+      this.name = "Samuel" + number;
+    }
+
+    changeName(event: any){
+      //console.log(event)
+      this.name = event.target.value;
+    }
 }
