@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent {
 
-    name= "Samuel";
+    name= "";
     age =33
     
 
@@ -15,15 +15,32 @@ export class NewComponent {
       return this.age
     }
 
-    add(){
+    addName(){
       console.log(`Adcionado ${this.name}`);
       
       const number = Math.round(Math.random() * 100);
       this.name = "Samuel" + number;
     }
 
+    addLastName(lastNameInput: any){
+      this.name = lastNameInput.value;
+      //console.log(lastNameInput.value);
+    }
+
     changeName(event: any){
       //console.log(event)
       this.name = event.target.value;
     }
+
+
+    //DIRRETIVE
+    isAdded = false;
+
+    authentication(){
+      console.log(`Welcome back ${this.name}`);
+      this.isAdded = true;
+    }
+
+
+
 }
