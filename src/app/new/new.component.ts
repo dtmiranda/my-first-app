@@ -33,12 +33,21 @@ export class NewComponent {
     }
 
 
-    //DIRRETIVE
+    
     isAdded = false;
 
     authentication(){
       console.log(`Welcome back ${this.name}`);
       this.isAdded = true;
+    }
+
+    employes = [];
+
+    addEmployes(){
+      console.log(`Adicionado ${this.name}`)
+      this.isAdded = true;
+
+      this.employes.push();
     }
 
 
