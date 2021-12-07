@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent {
 
-    name= "";
+    name= "Samuel";
     age =33
     
 
@@ -47,7 +47,7 @@ export class NewComponent {
       console.log(`Adicionado ${this.name}`)
       this.isAdded = true;
 
-      this.employes.push();
+      //this.employes.push(this.name);
     }
 
 
